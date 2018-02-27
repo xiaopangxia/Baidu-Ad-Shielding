@@ -1,0 +1,26 @@
+{
+	"name": "洁厕一号_百度推广屏蔽器",
+	"version": "1.0",
+	"manifest_version": 2,
+	"description": "清楚百度搜索结果中的推广链接chrome插件",
+	"permissions": [
+    	"http://*/",
+    	"http://*/*",
+    	"https://*/",
+    	"https://*/*"
+  	],
+	"icons": {
+		"16": "icon-16-coco.png",
+		"128": "icon-128-coco.png"
+	},
+	"browser_action": {
+		"default_icon": "icon-16-coco.png",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": [
+    {
+      "matches": ["http://*/","https://*/","http://*/*","https://*/*","https://www.baidu.com/*"],
+      "js": ["js/jquery-1.10.1.min.js", "js/my-del-ad-script.js"]
+    }
+  ]
+}
